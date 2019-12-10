@@ -34,3 +34,82 @@ check device name = adb devices
 `$ ./gradlew assembleDebug`
 #Create release build:
 `$ ./gradlew assembleRelease #Generated 'apk' will be located at 'android/app/build/outputs/apk'`
+
+
+<h4>React Navigation</h4>
+yarn add react-navigation
+yarn add react-navigation-stack
+
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens@^1.0.0-alpha.23
+
+yarn add react-native-webview
+
+add dependencies android/app/build.gradle:
+implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+
+add MainActivity.java
+package com.reactnavigation.example;
+
+import com.facebook.react.ReactActivity;
++ import com.facebook.react.ReactActivityDelegate;
++ import com.facebook.react.ReactRootView;
++ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+public class MainActivity extends ReactActivity {
+
+  @Override
+  protected String getMainComponentName() {
+    return "Example";
+  }
+
++  @Override
++  protected ReactActivityDelegate createReactActivityDelegate() {
++    return new ReactActivityDelegate(this, getMainComponentName()) {
++      @Override
++      protected ReactRootView createRootView() {
++       return new RNGestureHandlerEnabledRootView(MainActivity.this);
++      }
++    };
++  }
+}
+
+
+<h4>React Native Camera</h4>
+yarn add react-native-camera --save
+react-native link react-native-camera
+
+android/settings.gradle:
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir,     '../node_modules/react-native-camera/android')
+
+android/app/build.gradle
+implementation project(':react-native-camera')
+
+android/app/src/main/AndroidManifest.xml
+<!-- Required -->
+<uses-permission android:name="android.permission.CAMERA" />
+
+<!-- Include this only if you are planning to use the camera roll -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+<!-- Include this only if you are planning to use the microphone for video recording -->
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+android/app/build.gradle:
+android {
+  ...
+  defaultConfig {
+    ...
+    missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line
+  }
+}
+
+android {
+  ...
+  defaultConfig {
+    ...
+    missingDimensionStrategy 'react-native-camera', 'mlkit' // <--- replace general with mlkit
+  }
+}
