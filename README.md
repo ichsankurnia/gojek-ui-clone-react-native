@@ -4,14 +4,14 @@
 Windows PowerShell (Run as Administrator):
 `Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`
 
-`choco install yarn
-choco install nodejs.install --version 11.15.0
-choco install -y python2 jdk8`
+`choco install yarn`
+`choco install nodejs.install --version 11.15.0`
+`choco install -y python2 jdk8`
 
 Command Line (Run as Administrator):
-`npm install -g react-native-cli
-react-native init <project name> --version react-native@0.57
-react-native run-android`
+`npm install -g react-native-cli`
+`react-native init <project name> --version react-native@0.57`
+`react-native run-android`
 
 SDK:
 Android version 27 or 8.1.0 (opt: Emulator Nexus 5X API 27 Oreo)
