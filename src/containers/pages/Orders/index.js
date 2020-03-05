@@ -9,7 +9,7 @@ const Orders = (props) => {
                 <Text>This is page Orders</Text>
                 <Button onPress={() => props.navigation.navigate('OrderDetail')} title='Click Here to go to Order Detail'></Button>
             </View>
-            <HomeBottomNavigation />
+            <HomeBottomNavigation imgOrders={require('./../../../assets/icon/order-active.png')} textColorOrders='#61A756' />
         </View>
     )
 }

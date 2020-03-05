@@ -15,10 +15,10 @@ class BottomNavIcon extends React.Component {
 
     render() {
         return (
-            <View style={{alignItems:'center', justifyContent:'center', flex:1}}>
-                <TouchableOpacity onPress={this.props.onPress}>
+            <View style={{flex:1, justifyContent:'center'}}>
+                <TouchableOpacity style={{alignItems:'center', justifyContent:'center'}} onPress={this.props.onPress}>
                     <Image style={{height:26, width:26}} source={this.props.img}></Image>
-                    <Text style={{fontSize:10, color: this.props.active? '#61A756': '#545454'}}>{this.props.title}</Text>
+                    <Text style={{fontSize:10, color: this.props.textColor}}>{this.props.title}</Text>
                 </TouchableOpacity>
             </View>
         )

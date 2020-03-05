@@ -43,7 +43,9 @@ class ScanQRCode extends React.Component {
                         }}
                         style={{position:'absolute', width:'100%', height:'100%', left:0, right:0, flex: 1, justifyContent: 'flex-end', alignItems: 'center'}}
                         type={RNCamera.Constants.Type.back}
+                        // autoFocus={RNCamera.autoFocus.on}
                         flashMode={RNCamera.Constants.FlashMode.on}
+                        defaultVideoQuality = {RNCamera.Constants.VideoQuality['1080p']}
                         androidCameraPermissionOptions={{
                             title: 'Permission to use camera',
                             message: 'We need your permission to use your camera',
@@ -61,10 +63,22 @@ class ScanQRCode extends React.Component {
                         // }}
                         onBarCodeRead = {(barcode) => {
                             console.log(barcode);
+                            this.camera.pausePreview;
                             this.setState({
                                 decodeQR: barcode.data,
                                 rawData: barcode.rawData,
                                 type: barcode.type
+                            })
+                            this.props.navigation.navigate('ScanQRDetail', {
+                                decodeQR: barcode.data,
+                                rawData: barcode.rawData,
+                                type: barcode.type,
+                                bounds: {
+                                    width: barcode.bounds.width,
+                                    height: barcode.bounds.height,
+                                    origin: barcode.bounds.origin,
+                                    size: barcode.bounds.size
+                                }
                             })
                         }}
                     />

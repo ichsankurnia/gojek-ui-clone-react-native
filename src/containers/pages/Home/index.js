@@ -8,7 +8,7 @@ import GoNews from '../../../components/molecules/GoNews';
 import InternalInfo from '../../../components/molecules/InternalInformation';
 import Banner from '../../../components/molecules/GoBanner';
 import ScrollHorizontal from '../../../containers/organisms/ScrollableProduct';
-import HomeBotNav from '../../../containers/organisms/HomeBottomNavigation';
+import HomeBottomNavigation from '../../organisms/HomeBottomNavigation';
 
 class Home extends Component {
     render() {
@@ -36,7 +36,7 @@ class Home extends Component {
                 </ScrollView>
 
                 {/* Bottom Navigation */}
-                <HomeBotNav />
+                <HomeBottomNavigation imgHome={require('../../../assets/icon/home-active.png')} textColorHome='#61A756' />
 
             </View>
         )

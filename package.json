@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "install": "^0.13.0",
+    "jetifier": "^1.6.5",
     "react": "16.8.6",
     "react-native": "0.60.6",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
