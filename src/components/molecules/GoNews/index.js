@@ -16,7 +16,7 @@ const GoNews = (props) => {
                 <Text style={{fontSize:16, fontWeight:'bold', color:'#1C1C1C'}}>GO-NEWS</Text>
                 <Text style={{fontSize:14, fontWeight:'normal', color:'#7A7A7A', marginBottom:11}}>{props.description}</Text>
                 {/* <Button title="READ" style={{backgroundColor:"#61A756"}}></Button> */}
-                <TouchableOpacity style={{backgroundColor:'#61A756', paddingVertical:11, paddingHorizontal:12, alignSelf:'flex-end', borderRadius:4}} onPress={props.onPress}>
+                <TouchableOpacity style={{backgroundColor:'#61A756', paddingVertical:11, paddingHorizontal:20, alignSelf:'flex-end', borderRadius:4}} onPress={props.onPress}>
                     <Text style={{fontSize:13, fontWeight:'bold', color:'#FFF', textAlign:'center'}}>READ</Text>
                 </TouchableOpacity>
             </View>

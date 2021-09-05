@@ -6,8 +6,8 @@ const MainFeature = (props) => {
     return (
         <View style={{alignItems:'center', justifyContent:'center', width:'25%', marginBottom:23}}>
             <TouchableOpacity onPress={props.onPress} style={{alignItems:'center', justifyContent:'center'}}>
-                <Image style={{height:40, width:40}} source={props.img}></Image>
-                <Text style={{color:'#555', fontSize:13, marginTop:8}}>{props.title}</Text>
+                <Image style={{height:45, width:45}} source={props.img}></Image>
+                <Text style={{color:'#555', fontSize:15, marginTop:8}}>{props.title}</Text>
             </TouchableOpacity>
         </View>
     )

@@ -15,7 +15,7 @@ const InternalInfo = () => {
                 <Text style={{fontSize:15, color:'#4A4A4A', width:'70%'}}>Log in faster without verification code</Text>
             </View>
             </View>
-            <TouchableOpacity style={{backgroundColor:'#61A756', paddingVertical:11, paddingHorizontal:12, alignSelf:'flex-end', borderRadius:4}}>
+            <TouchableOpacity style={{backgroundColor:'#61A756', paddingVertical:11, paddingHorizontal:20, alignSelf:'flex-end', borderRadius:4}}>
                 <Text style={{fontSize:13, fontWeight:'bold', color:'#FFF', textAlign:'center'}}>CONNECT</Text>
             </TouchableOpacity>
             <View style={{borderBottomColor:'#E8E9ED', borderBottomWidth:1, marginTop:16}}></View>

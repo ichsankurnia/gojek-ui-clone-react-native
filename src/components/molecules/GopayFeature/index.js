@@ -6,8 +6,8 @@ const GopayFeature = (props) =>{
     return (
       <View style={{flex:1, paddingVertical:5}}>
         <TouchableOpacity onPress={props.onPress} style={{alignItems:'center', justifyContent:'center'}}>
-          <Image style={{height:30, width:30}} source={props.img}></Image>
-          <Text style={{color:'#fff', fontWeight:'bold', marginTop:7, fontSize:13}}>{props.title}</Text>
+          <Image style={{height:40, width:40}} source={props.img}></Image>
+          <Text style={{color:'#fff', fontWeight:'bold', marginTop:7, fontSize:15}}>{props.title}</Text>
         </TouchableOpacity>
       </View>
     )
